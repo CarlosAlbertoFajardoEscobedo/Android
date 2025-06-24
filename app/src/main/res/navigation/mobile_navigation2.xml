@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation2"
+    app:startDestination="@+id/nav_listaprod_adm">
+
+    <fragment
+        android:id="@+id/nav_listaprod_adm"
+        android:name="pe.idat.proyectofinalv1.view.admin.fragment.ListaProductosAdmFragment"
+        android:label="PRODUCTOS"
+        tools:layout="@layout/fragment_lista_productos_adm" >
+        <action
+            android:id="@+id/action_list_to_list"
+            app:destination="@id/nav_listaprod_adm" />
+        <action
+            android:id="@+id/action_list_to_newprod"
+            app:destination="@+id/nav_nuevoprod"
+            app:popUpTo="@id/nav_listaprod_adm" />
+        <action
+            android:id="@+id/action_list_to_edit"
+            app:destination="@+id/nav_editprod"
+            app:popUpTo="@id/nav_listaprod_adm" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_nuevoprod"
+        android:name="pe.idat.proyectofinalv1.view.admin.fragment.NuevoProductoFragment"
+        android:label="NUEVO PRODUCTO"
+        tools:layout="@layout/fragment_nuevo" >
+        <action
+            android:id="@+id/action_newprod_to_listprod"
+            app:destination="@+id/nav_listaprod_adm"
+            />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_editprod"
+        android:name="pe.idat.proyectofinalv1.view.admin.fragment.EditProductoFragment"
+        android:label="EDITAR PRODUCTO"
+        tools:layout="@layout/fragment_edit_producto">
+
+        <argument
+            android:name="productoItemx"
+            app:argType="pe.idat.proyectofinalv1.retrofit.model.Producto"
+            />
+        <action
+            android:id="@+id/action_to_listadmin"
+            app:destination="@+id/nav_listaprod_adm"
+            />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_ordenes_adm"
+        android:name="pe.idat.proyectofinalv1.view.admin.fragment.OrdenListAdmFragment"
+        android:label="ORDENES"
+        tools:layout="@layout/fragment_orden_list_adm" >
+        <action
+            android:id="@+id/action_ordenAdm_detalleOrdAdm"
+            app:destination="@id/nav_detalleOrden_adm"
+            app:popUpTo="@id/nav_ordenes_adm"
+            />
+
+    </fragment>
+
+
+
+    <fragment
+        android:id="@+id/nav_detalleOrden_adm"
+        android:name="pe.idat.proyectofinalv1.view.admin.fragment.DetalleOrdenAdmFragment"
+        android:label="DETALLE DE LA ORDEN"
+        tools:layout="@layout/fragment_detalle_orden_adm"
+        >
+        <argument
+            android:name="irOrdenx"
+            app:argType="pe.idat.proyectofinalv1.retrofit.response.ResponseOrden"
+            />
+
+    </fragment>
+
+
+
+</navigation>

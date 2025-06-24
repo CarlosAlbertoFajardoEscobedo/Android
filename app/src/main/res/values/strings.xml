@@ -1,0 +1,45 @@
+<resources>
+    <string name="app_name">ProyectoFinalV1</string>
+    <string name="title_activity_menu_usuario">MenuUsuario</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="valnavcarrito">Carrito de Compras</string>
+    <string name="navmonturas">Monturas</string>
+    <string name="navorden">Orden de Compra</string>
+    <string name="btnItemAgregar">Agregar</string>
+    <string name="valRegistro">Registrarte</string>
+    <string name="Item_nroOrd">NÚMERO DE ORDEN</string>
+    <string name="Item_estOrd">ESTADO DE ORDEN</string>
+    <string name="Item_fechOrdn">FECHA DE LA ORDEN</string>
+    <string name="Item_totalOrdn" />
+    <string name="Itemt_totaOrd">TOTAL DE LA ORDEN</string>
+    <string name="valTitulOrd">MIS ORDENES</string>
+    <string name="Item_detordNomProd">Nombre del producto</string>
+    <string name="Item_DetOrdNombProd">NOMBRE DEL PRODUCTO</string>
+    <string name="Item_DetOrdCantid">CANTIDAD</string>
+    <string name="Item_DetOrdPrec">PRECIO DEL PRODUCTO</string>
+    <string name="Item_DetOrdSubTot">SUBTOTAL</string>
+    <string name="nav_detalleMontura">Detalle Montura</string>
+    <string name="valetusuario">Ingrese su Usuario</string>
+    <string name="valetpassword">Ingrese su password</string>
+    <string name="valbtnlogin">INICIAR SESIÓN</string>
+    <string name="valchkguardardatos">Recordar</string>
+    <string name="valbtnregistrarme">QUIERO REGISTRARME</string>
+    <string name="msloginincompleto">Usuario y Password son necesarios</string>
+    <string name="valNavPasarella">Pasarela de pago</string>
+    <string name="nav_detalleordenx">Detalle de la Orden</string>
+    <string name="nom_portada">BUENA VISIÓN</string>
+    <string name="tvTotalx">Total a pagar:</string>
+    <string name="tvTotalDescuentox">Total con descuento:</string>
+    <string name="title_activity_menu_admin">MenuAdmin</string>
+</resources>

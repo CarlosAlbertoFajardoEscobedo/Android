@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    tools:context=".view.admin.fragment.NuevoProductoFragment">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="1dp"
+        android:paddingRight="1dp">
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:boxBackgroundColor="@null">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tiedtNombreNewProd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nombre Producto" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:boxBackgroundColor="@null">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tiedDescripNewProd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Descripcion" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:boxBackgroundColor="@null">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tiedtStockNewProd"
+                    android:layout_width="178dp"
+                    android:layout_height="wrap_content"
+                    android:hint="Stock"
+                    android:inputType="number" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="217dp"
+                android:layout_height="wrap_content"
+                app:boxBackgroundColor="@null">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tiedPrecioNewProd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Precio"
+                    android:inputType="numberDecimal" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:boxBackgroundColor="@null">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tiedtUrlImagenNewProd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Url Imagen" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <CheckBox
+            android:id="@+id/chkEstadoNewProd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Estado" />
+
+        <Button
+            android:id="@+id/btnGuardarNewProd"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Guardar" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="392dp"
+            android:layout_height="296dp"
+            tools:src="@tools:sample/avatars" />
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

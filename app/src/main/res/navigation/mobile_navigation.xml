@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_productos">
+
+    <fragment
+        android:id="@+id/nav_productos"
+        android:name="pe.idat.proyectofinalv1.view.cliente.fragment.ProductosFragment"
+        android:label="Productos"
+        tools:layout="@layout/fragment_productos" >
+        <action
+            android:id="@+id/action_ProductoFragment_to_DetalleProductoFragment"
+            app:destination="@+id/nav_detalleproducto"
+            app:popUpTo="@id/nav_detalleproducto"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_detalleproducto"
+        android:name="pe.idat.proyectofinalv1.view.cliente.fragment.DetalleProductoFragment"
+        android:label="Detalle Producto"
+        tools:layout="@layout/fragment_detalle_producto">
+        <argument
+            android:name="productItem"
+            app:argType="pe.idat.proyectofinalv1.retrofit.model.Producto"
+            />
+
+        </fragment>
+    <fragment
+        android:id="@+id/nav_carrito"
+        android:name="pe.idat.proyectofinalv1.view.cliente.fragment.CarritoFragment"
+        android:label="Carrito de Compras"
+        tools:layout="@layout/fragment_carrito" >
+        <action
+            android:id="@+id/action_DetalleProductoFragment_to_CarritoFragment"
+            app:destination="@+id/nav_carrito" />
+        <action
+            android:id="@+id/action_Carrito_to_Pasarella"
+            app:destination="@+id/nav_pasarela"
+            />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_pasarela"
+        android:name="pe.idat.proyectofinalv1.view.cliente.fragment.PasarelaFragment"
+        android:label="Pasarela de Pago"
+        tools:layout="@layout/fragment_pasarela">
+        <action
+            android:id="@+id/action_pasrela_to_productos"
+            app:destination="@+id/nav_productos"
+            />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_orden"
+        android:name="pe.idat.proyectofinalv1.view.cliente.fragment.OrdenFragment"
+        android:label="Ordenes"
+        tools:layout="@layout/fragment_orden" />
+
+    <action
+        android:id="@+id/action_OrdenFragmnet_to_DetalleOrdenFragment"
+        app:destination="@+id/nav_detalleOrd"
+        app:popUpTo="@id/nav_orden"
+        />
+    <fragment
+        android:id="@+id/nav_detalleOrd"
+        android:name="pe.idat.proyectofinalv1.view.cliente.fragment.DetalleOrdenFragment"
+        android:label="Detalle de la Orden"
+        tools:layout="@layout/fragment_detalle_orden">
+        <argument
+            android:name="idOrden"
+            app:argType="pe.idat.proyectofinalv1.retrofit.response.ResponseOrden"
+            />
+    </fragment>
+</navigation>
